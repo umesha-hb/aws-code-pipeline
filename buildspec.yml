@@ -10,10 +10,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn package
+      - mvn  package
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/aws-code-build-pipeline.jar
+    - aws-code-build-pipeline.jar
