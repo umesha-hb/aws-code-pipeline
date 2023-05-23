@@ -25,7 +25,7 @@ public class AwsCodeBuildPipelineApplication {
     public List<Order> fetchOrders() {
         return orderDao.getOrders();
     }
-    @GetMapping("{orderName}")
+    @GetMapping("/{orderName}")
     public  List<Order> findOrderByName(@PathVariable String orderName) {
         return orderDao.getOrders().stream().filter(order -> order.getName().equals(orderName)).collect(Collectors.toList());
     }
